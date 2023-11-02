@@ -5,9 +5,10 @@ phases:
     runtime-versions:
       nodejs: 16
   build:
-  commands:
-    - npm -g install npm@latest
-    - npm install
+    commands:
+      - npm cache clean --force
+      - npm -g install npm@latest
+      - npm install
   post_build:
     commands:
       - echo "Build completed on `date`"
