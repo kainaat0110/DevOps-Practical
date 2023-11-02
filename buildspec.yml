@@ -5,9 +5,9 @@ phases:
     runtime-versions:
       nodejs: 16
   build:
-    commands:
-      - npm install   # Install any dependencies
-      - npm run build  # Replace with your build command (e.g., webpack, gulp, etc.)
+  commands:
+    - npm -g install npm@latest
+    - npm install
   post_build:
     commands:
       - echo "Build completed on `date`"
